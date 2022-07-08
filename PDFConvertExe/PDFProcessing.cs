@@ -50,6 +50,7 @@ namespace PDFConvertExe
       processInfo.CreateNoWindow = true;
       processInfo.UseShellExecute = false;
 
+      Console.WriteLine(GS_PATH);
       Process.Start(processInfo);
  
       //pdfFilePathで指定したファイルが作成されているかをcheckCounter回チェック
