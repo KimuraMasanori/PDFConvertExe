@@ -5,10 +5,13 @@ using System.Text;
 
 namespace PDFConvertExe
 {
-  class Program
+  public class Program
   {
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
+      Console.WriteLine(args[0]);
+      Console.WriteLine(args[1]);
+
       string xpsPath = args[0];
       string pdfPath = args[1];
 
