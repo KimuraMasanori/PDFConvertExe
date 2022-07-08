@@ -61,50 +61,5 @@ namespace PDFConvertExe
         Console.WriteLine(pdfFilePath + " NOT FOUND");
       }
     }
-
-
-    //public void mergePdfFiles(List<string> pdfPathList, string mergedPdfPath)
-    //{
-    //  PdfDocument document = new PdfDocument();
-
-    //  foreach (var pdffile in pdfPathList)
-    //  {
-    //    /* 
-    //      pdffileが別のプロセスで使用されていないかをcheckCounter回チェックする
-    //    */
-    //    int checkCounter = 10;
-    //    bool isOKFlg = false;
-    //    while (checkCounter != 0 && !isOKFlg)
-    //    {
-    //      try
-    //      {
-    //        using (var pdfsr = File.OpenRead(pdffile))
-    //        {
-    //          isOKFlg = true;
-    //          pdfsr.Close();
-    //        }
-    //      }
-    //      catch (IOException ioex)
-    //      {
-    //        Console.WriteLine(pdffile + ":" + ioex.Message);
-    //        System.Threading.Thread.Sleep(1000);
-    //        checkCounter--;
-    //      }
-    //    }
-
-    //    PdfDocument mergedDocument = PdfReader.Open(pdffile, PdfDocumentOpenMode.Import);
-
-    //    foreach (var page in mergedDocument.Pages)
-    //    {
-    //      document.AddPage(page);
-    //    }
-
-    //    mergedDocument.Close();
-
-
-    //    document.Save(mergedPdfPath);
-
-    //  }
-    //}
   }
 }

@@ -7,14 +7,22 @@ namespace PDFConvertExe.Tests
   [TestClass()]
   public class PDFProcessingTests
   {
+
+    string rootPath;
+    string xpsFile;
+    string pdfPath;
+
+    [TestInitialize]
+    public void initSettings()
+    {
+      rootPath = @"C:\Users\kimura\Documents\Mikoshi\pdf\";
+      xpsFile = Path.Combine(rootPath, "h01_1a_20220708040117.xps");
+      pdfPath = Path.Combine(rootPath, "h01_1a_20220708040117.pdf");
+    }
+
     [TestMethod]
     public void convertXPSToPdfTest1()
     {
-      var rootPath = @"C:\Users\kimura\Documents\Mikoshi\pdf\";
-      var xpsFile = Path.Combine(rootPath, "h01_1a_20220708024423.xps");
-      var pdfPath = Path.Combine(rootPath, "h01_1a_20220708024423.pdf");
-
-
       if (File.Exists(pdfPath))
       {
         File.Delete(pdfPath);
@@ -30,10 +38,6 @@ namespace PDFConvertExe.Tests
     [TestMethod]
     public void convertXPSToPdfTest2()
     {
-      var rootPath = @"C:\Users\kimura\Documents\Mikoshi\pdf\";
-      var xpsFile = Path.Combine(rootPath, "h01_1a_20220708024423.xps");
-      var pdfPath = Path.Combine(rootPath, "h01_1a_20220708024423.pdf");
-
 
       if (File.Exists(pdfPath))
       {
@@ -49,11 +53,6 @@ namespace PDFConvertExe.Tests
     [TestMethod]
     public void convertXPSToPdfTest3()
     {
-      var rootPath = @"C:\Users\kimura\Documents\Mikoshi\pdf\";
-      var xpsFile = Path.Combine(rootPath, "h01_1a_20220708024423.xps");
-      var pdfPath = Path.Combine(rootPath, "h01_1a_20220708024423.pdf");
-
-
       if (File.Exists(pdfPath))
       {
         File.Delete(pdfPath);
