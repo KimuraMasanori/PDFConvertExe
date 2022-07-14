@@ -49,6 +49,7 @@ namespace PDFConvertExe
       //コマンドウィンドウを表示しない
       processInfo.CreateNoWindow = true;
       processInfo.UseShellExecute = false;
+      processInfo.WindowStyle = ProcessWindowStyle.Hidden;
 
       Console.WriteLine(GS_PATH);
       Process.Start(processInfo);
